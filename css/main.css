@@ -1,49 +1,67 @@
-*,*:before,*:after{
+*,
+*::before,
+*::after {
    padding: 0;
    margin: 0;
    border: 0;
    box-sizing: border-box;
 }
-
-/* @import url(color.css) screen and (color); */
-
-html,body{
+a {
+   text-decoration: none;
+}
+ul,
+ol,
+li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+html,
+body {
    height: 100%;
+   line-height: 1;
+   font-size: 16px;
+   color: black;
+   font-family: Roboto;
 }
-body{
-   font-family: Arial, Helvetica, sans-serif;
-}
-.wrapper{
-   display: flex;
+.wrapper {
    min-height: 100%;
    overflow: hidden;
-   flex-direction: column;
 }
 
-.container{
-   max-width: 1200px;
+._container {
+   max-width: 984px;
    margin: 0px auto;
-   padding: 0px 15px;
+}
+/* ...................шапка................ */
+
+.header {
+   position: absolute;
+   width: 100%;
+   left: 0;
+   top: 0;
+   z-index: 50;
+}
+.header_container {
+   display: flex;
+   min-height: 200px;
+   align-items: center;
 }
 
-@media (max-width: 1200px){
-   .container{
-      max-width: 970px;
-   }
+.header_menu {
+   margin: 0px 0px 0px 170px;
 }
-
-@media (max-width: 992px){
-   .container{
-      max-widht: 750px;
-   }
-}
-
-@media (max-width: 767px){
-   .container{
-      max-widht: none;
-   }
-}
-
-@media (max-widht:420px){
-
-}
+.menu {}
+.menu_list{}
+.menu_item {}
+.menu_link {}
