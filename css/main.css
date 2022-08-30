@@ -4,8 +4,7 @@
    padding: 0;
    margin: 0;
    border: 0;
-   box-sizing: border-box;
-}
+   box-sizing: border-box;}
 a {
    text-decoration: none;
 }
@@ -37,11 +36,15 @@ body {
 .wrapper {
    min-height: 100%;
    overflow: hidden;
+   display: flex;
+   flex-direction: column;
 }
 
 ._container {
-   max-width: 984px;
+   max-width: 1000px;
+   padding: 0px 15px;
    margin: 0px auto;
+   box-sizing: content-box;
 }
 /* ...................шапка................ */
 
@@ -55,13 +58,81 @@ body {
 .header_container {
    display: flex;
    min-height: 200px;
-   align-items: center;
+   align-items:stretch;
+}
+
+@media (max-widht: 479px) {
+   .header_container {
+      min-height: 85px;
+   }
 }
 
 .header_menu {
-   margin: 0px 0px 0px 170px;
+   margin: 0px 0px 0px 450px;
 }
-.menu {}
-.menu_list{}
-.menu_item {}
-.menu_link {}
+
+@media (max-weight:992px) {
+   .header_menu {
+      margin: 0px 0px 0px 80px;
+   }
+}
+@media (max-width:992px) {
+   .header_menu {
+      margin: 0px 0px 0px 40px;
+   }
+}
+@media (max-width: 479px) {
+   .header_menu {
+      margin: 0px 0px 0px 20px;
+   }
+}
+.menu {
+   padding: 10px 0;
+}
+.menu_list{
+   flex-wrap: wrap;
+   display: flex;
+}
+.menu_item {
+}
+.menu_item:not(:last-child) {
+   margin:0px 35px 0px 0px;
+}
+.menu_link {
+   color: black;
+   font-weight: 600;
+   line-height: 129%;
+}
+@media (max-widht:479px) {
+   .menu_link {
+      font-size: 18px;
+   }
+}
+/* ...................page................ */
+.page {
+   flex: 1 1 auto;
+}
+.center {
+      position:absolute;
+      top: 23%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+.logo{
+   position:absolute;
+      top: 20%;
+      left: 30%;
+      right:65%;
+      transform: translate(-50%, -50%);
+}
+.right{
+   position:absolute;
+      top: 20%;
+      left: 65%;
+      right:30%;
+      transform: translate(-50%, -50%);
+}
+
+/* ...................подвал................ */
+.footer {
+
+}
